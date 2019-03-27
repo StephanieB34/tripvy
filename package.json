@@ -1,0 +1,19 @@
+{
+  "name": "tripvy",
+  "version": "1.0.0",
+  "description": "travel app",
+  "main": "index.js",
+  "scripts": {
+    "test": "Hello world"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StephanieB34/tripvy.git"
+  },
+  "author": "Stephanie Beres",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/StephanieB34/tripvy/issues"
+  },
+  "homepage": "https://github.com/StephanieB34/tripvy#readme"
+}
