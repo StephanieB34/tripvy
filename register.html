@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Tripvy</title>
+    <script
+          src="https://code.jquery.com/jquery-3.2.1.min.js"
+          integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+          crossorigin="anonymous"></script>
+    <link href="/register.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="signup-page" hidden>
+        <form role="form" accept-charset="UTF-8" class="signup-form">
+          <fieldset>
+            <legend>Register</legend>
+            <label for="first-name">First Name</label>
+            <input
+              type="text"
+              placeholder="Type here"
+              name="first-name"
+              id="first-name"
+              required
+            />
+  
+            <label for="last-name">Last Name</label>
+            <input
+              type="text"
+              placeholder="Type here"
+              name="last-name"
+              id="last-name"
+              required
+            />
+  
+            <label for="username">Username</label>
+            <input
+              type="text"
+              placeholder="Type here"
+              name="username"
+              id="signup-username"
+              required
+            />
+  
+            <label for="password">Password</label>
+            <input
+              type="password"
+              placeholder="Type here"
+              name="password"
+              id="password"
+              required
+            />
+  
+            <label for="retype-password">Retype Password</label>
+            <input
+              type="password"
+              placeholder="Type again here"
+              name="retype-password"
+              id="retype-signup-password"
+              required
+            />
+            <div id= "signup-error">
+            
+            </div>
+            <button type="submit">Sign-up</button>
+          </fieldset>
+        </form>
+      </div>
+  
+      
