@@ -1,0 +1,103 @@
+#landing-page-intro {
+    background-image: url("https://images.unsplash.com/photo-1492250817888-f4ea0ed5d3f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80");
+    height: 500px;
+    width: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    margin-top: 0;
+}
+ 
+#landing-page {
+    overflow: scroll;
+}
+
+header {
+    padding-top: 12%;
+    font-size: 30px;
+    color: white;
+    font-family: "Roboto";
+}
+
+h1 {
+    padding-top: 12%;
+    font-size: 30px;
+    color: white;
+    font-family: "Roboto";
+     
+}
+
+
+.text-block {
+    width: 100%;
+    padding: 10px;
+    display: inline-block;
+    box-sizing: border-box;
+    font-size: 18px;
+    margin-bottom: 10%;
+    height: 320px;
+    border: 2px solid black;
+    font-family: "Roboto";
+    background-color: white;
+}
+
+.about-section {
+    text-align: center;
+    font-size: 24px;
+    background-color: rgba(239, 118, 119, 0.91);
+    height: 20%;
+    margin-top: -8%;
+}
+
+.text-container {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.photo-section {
+    background-color: #2D304E;
+    text-align: center;
+    font: bold;
+    font-size: 18px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+    font-family: "Roboto", helvetica, sans-serif;
+}
+
+.why-section {
+    text-align: center;
+    font-size: 24px;
+    background-color: rgba(239, 118, 119, 0.91);
+    height: 20%;
+    margin-bottom: 10%;
+}
+
+.text-container-2 {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+h5 {
+    margin-top: 10px;
+    font-size: 18px;
+    font-family: "Roboto";
+  }
+  
+
+
+@media screen and  (min-width: 767px) {
+    .text-block {
+        float: left;
+        width: 33.3%;
+        background-color: white;
+        padding: 15px;
+        box-sizing: border-box;
+        margin-right: -4px;
+        border: 2px solid black;
+    }
+
+    .about-section {
+        margin-top: -3%;
+    }
+}

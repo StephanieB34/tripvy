@@ -1,18 +1,18 @@
-<!DOCTYPE html>
-<html lang='en'>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Tripvy</title>
-    <script
-          src="https://code.jquery.com/jquery-3.2.1.min.js"
-          integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-          crossorigin="anonymous"></script>
-    <link href="/register.css" rel="stylesheet" type="text/css" />
-  </head>
-  <body>
-    <div id="signup-page" hidden>
-      <header>Register</header>
+import React from 'react';
+import {connect} from 'react-redux';
+import {Link, Redirect} from 'react-router-dom';
+
+import RegistrationForm from './registration-form';
+
+export function RegistrationPage(props) {
+    // If we are logged in (which happens automatically when registration
+    // is successful) redirect to the user's dashboard
+    if (props.loggedIn) {
+        return <Redirect to="/dashboard" />;
+    }
+    return (
+        <div id="signup-page" hidden>
+        <header>Register</header>
         <form role="form" accept-charset="UTF-8" class="signup-form">
           <fieldset>
             <legend>Register</legend>
@@ -67,6 +67,11 @@
           </fieldset>
         </form>
       </div>
-  </body>
-</html>
-      
+    );
+}
+
+const mapStateToProps = state => ({
+    loggedIn: state.auth.currentUser !== null
+});
+
+export default connect(mapStateToProps)(RegistrationPage);

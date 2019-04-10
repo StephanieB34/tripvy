@@ -1,0 +1,10 @@
+header {
+    text-align: center;
+    font-size: 30px;
+    font-family: "Roboto";
+    background-color: rgba(239, 118, 119, 0.91);
+    color: #2F3250;
+    background: cover;
+    height: 200px;
+    margin-top: 0;
+}
