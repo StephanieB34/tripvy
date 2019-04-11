@@ -1,0 +1,89 @@
+header {
+    text-align: center;
+    font-size: 30px;
+    font-family: "Roboto";
+    background-color: rgba(239, 118, 119, 0.91);
+    color: #2F3250;
+    background: cover;
+    height: 300px;
+    margin-top: 0;
+}
+
+h1 {
+   text-align: center;
+   font-size: 80px;
+   padding: 10%; 
+}
+
+#list {
+    color: white;
+    margin-left: 10%;
+    font-size: 45px;
+}
+
+#item {
+    width: 70%;
+    height: 50px;
+}
+
+#location {
+    width: 70%;
+    height: 50px;
+}
+.create-page {
+    background-color: #2F3250;
+    font-family: "Roboto", helvetica, sans-serif;
+    padding: 85px 0 0;
+    margin: 0;
+    font-size: 18px;
+    height: 90%;
+    font-family: "Roboto", helvetica, sans-serif;
+    width: 100%;
+   
+}
+
+#add {
+    background-color: rgba(239, 118, 119, 0.91);
+    width: 30%;
+    height: 5%;
+    font-size: 40px;
+    margin-right: 60%;
+    color: white;
+    padding: 10px;
+    margin-top: 10%;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(239, 118, 119, 0.91);
+    color: white;
+    text-align: center;
+    height: 8%;
+    font-size: 40px;
+  }
+
+  @media screen and  (min-width: 1024px) {
+      #add {
+          font-size: 25px;
+          width: 15%;
+          margin-left: 75%;
+      }
+
+      .footer {
+          height: 50px;
+          font-size: 20px;
+      }
+
+      header {
+          height: 200px;
+      }
+
+      h1 {
+          font-size: 60px;
+          padding: 5%;
+      }
+
+  }
