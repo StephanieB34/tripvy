@@ -1,20 +1,3 @@
-header {
-    text-align: center;
-    font-size: 30px;
-    font-family: "Roboto";
-    background-color: rgba(239, 118, 119, 0.91);
-    color: #2F3250;
-    background: cover;
-    height: 300px;
-    margin-top: 0;
-}
-
-h1 {
-   text-align: center;
-   font-size: 80px;
-   padding: 10%; 
-}
-
 #details{
     margin-top: 10%;
     background-color: white;

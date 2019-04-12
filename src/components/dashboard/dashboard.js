@@ -2,15 +2,14 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {Link, Redirect} from 'react-router-dom';
 
-import dashboard from './dashboard.css';
+import './dashboard.css';
 
-export function dashboard(props) {
-    // If we are logged in redirect straight to the user's dashboard
-    if (props.loggedIn) {
-        return <Redirect to="/dashboard" />;
-    }
+export function Dashboard(props) {
+    
+    
 
-    return (
+return (
+      <div>
       <header> 
         <h1>Tripvy</h1>
       </header>
@@ -28,6 +27,7 @@ export function dashboard(props) {
     </div>
     <div class="footer">
       <p>Stephanie Beres</p>
+    </div>  
     </div>
   );
 }
@@ -36,4 +36,4 @@ const mapStateToProps = state => ({
     loggedIn: state.auth.currentUser !== null
 });
 
-export default connect(mapStateToProps)(dashboard); 
+export default connect(mapStateToProps)(Dashboard); 
