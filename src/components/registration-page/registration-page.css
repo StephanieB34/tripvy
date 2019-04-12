@@ -1,31 +1,12 @@
-header {
-    text-align: center;
-    font-size: 30px;
-    font-family: "Roboto";
-    background-color: rgba(239, 118, 119, 0.91);
-    color: #2F3250;
-    background: cover;
-    height: 200px;
-    margin-top: 0;
-    padding: 10%;
-}
-
-h1 {
-text-align: center;
-   font-size: 80px;
-   padding: 5%; 
-}
-
 #signup-page {
     background-color: #2F3250;
     font-family: "Roboto", helvetica, sans-serif;
-    padding: 85px 0 0;
     margin: 0;
     font-size: 18px;
     height: 100%;
     font-family: "Roboto";
-    overflow: scroll;
     width: 100%;
+    
   }
   
   
@@ -33,6 +14,7 @@ text-align: center;
     width: 60%;
     padding: 10%;
     margin: 0 auto;
+   
   }
   
   #first-name {
@@ -91,24 +73,10 @@ text-align: center;
     background:rgba(239, 118, 119, 0.91) ;
     border: 0;
     cursor: pointer;
-    margin-bottom: 0;
+    margin-bottom: 20%;
   }
 
-  .footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: rgba(239, 118, 119, 0.91);
-    color: white;
-    text-align: center;
-    height: 8%;
-    font-size: 40px;
-  }
-
-  .footer p {
-      margin-top: 0%;
-  }
+  
   @media screen and  (min-width: 1024px) {
     .footer {
         height: 50px;

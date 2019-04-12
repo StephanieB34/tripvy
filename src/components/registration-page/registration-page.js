@@ -14,9 +14,7 @@ export function RegistrationPage(props) {
         <div id="signup-page">
         <header><h1>Register</h1>
         </header>
-        <form role="form" accept-charset="UTF-8" class="signup-form">
-          <fieldset>
-            <legend>Register</legend>
+        <form role="form" acceptCharset="UTF-8" className="signup-form">
             <label id="first-name">First Name</label>
             <input
               type="text"
@@ -65,7 +63,6 @@ export function RegistrationPage(props) {
             
             </div>
             <button type="submit">Sign-up</button>
-          </fieldset>
         </form>
       </div>
     );

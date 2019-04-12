@@ -1,56 +1,39 @@
+.dashboard-page {
+    background-color: #2F3250;
+    font-family: "Roboto", helvetica, sans-serif;
+    margin: 0;
+    font-size: 18px;
+    padding-bottom: 150%;
+    font-family: "Roboto";
+    width: 100%;
+}
 #details{
     margin-top: 10%;
     background-color: white;
-    font-size: 35px;
+    font-size: 18px;
     height: 5%;
     width: 80%;
     /* text-align: center; */
     margin-left: 10%;
 }
-
-.dashboard-page {
-    background-color: #2F3250;
-    font-family: "Roboto", helvetica, sans-serif;
-    padding: 85px 0 0;
-    margin: 0;
-    font-size: 18px;
-    height: 90%;
-    font-family: "Roboto", helvetica, sans-serif;
-    width: 100%;
-   
-}
-
 #create {
     background-color: rgba(239, 118, 119, 0.91);
     width: 30%;
-    height: 5%;
-    font-size: 40px;
+    font-size: 18px;
     margin-left: 60%;
     color: white;
+    margin-top: 10%;
+    border-radius: 10%;
 }
 
-.footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: rgba(239, 118, 119, 0.91);
-    color: white;
-    text-align: center;
-    height: 8%;
-    font-size: 40px;
-  }
+
+
 
   @media screen and  (min-width: 1024px) {
       #create {
           font-size: 25px;
           width: 15%;
           margin-left: 75%;
-      }
-
-      .footer {
-          height: 50px;
-          font-size: 20px;
       }
 
       header {

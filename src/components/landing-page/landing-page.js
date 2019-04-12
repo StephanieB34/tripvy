@@ -13,13 +13,13 @@ export function LandingPage(props) {
     return (
         <div id="landing-page">
         <div id="landing-page-intro">
-            <header>Tripvy</header>
-            <h1>Planning for your trip shouldn't be stressful</h1>
+            <h1 className= "landing-header">Tripvy</h1>
+            <h2 className="landing-header-2">Planning for your trip shouldn't be stressful</h2>
         </div>
     
-        <section class="about-section">
-            <div class="text-container">
-                <h2>About</h2>
+        <section className="about-section">
+            <div className="text-container">
+                <h3>About</h3>
                 <p>
                     Tripvy is a tool that allows users to 
                     plan in advance what they need for their
@@ -30,25 +30,25 @@ export function LandingPage(props) {
             </div>
         </section>
         
-        <section class="photo-section">
-            <h3>Tripvy</h3>
-            <div class="text-block">
+        <section className="photo-section">
+            <h4>Tripvy</h4>
+            <div className="text-block">
                 <p>Plan</p>
-                <div class="landing-img" id="landing-img-1"></div>
+                <div className="landing-img" id="landing-img-1"></div>
             </div>
-            <div class="text-block">s
+            <div className="text-block">
                 <p>Pack</p>
-                <div class="landing-img" id="landing-img-2"></div>
+                <div className="landing-img" id="landing-img-2"></div>
             </div>
-            <div class="text-block">
+            <div className="text-block">
                 <p>Enjoy</p>
-                <div class="landing-img" id="landing-img-3"></div>
+                <div className="landing-img" id="landing-img-3"></div>
             </div>
         </section>
     
-        <section class="why-section">
-            <div class="text-container-2">
-            <h4>Why use Tripvy?</h4>
+        <section className="why-section">
+            <div className="text-container-2">
+            <h5>Why use Tripvy?</h5>
                 <p>
                     There is nothing worse than getting to your new destination 
                     and realizing you have forgotten your most important items, 

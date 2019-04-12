@@ -25,9 +25,6 @@ return (
         </select>
       </form>
     </div>
-    <div class="footer">
-      <p>Stephanie Beres</p>
-    </div>  
     </div>
   );
 }

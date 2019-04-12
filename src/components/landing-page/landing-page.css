@@ -5,22 +5,20 @@
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
-    margin-top: 0;
+    padding: 10%;   
 }
  
 #landing-page {
     overflow: scroll;
 }
 
-header {
-    padding-top: 12%;
+.landing-header {
     font-size: 30px;
     color: white;
     font-family: "Roboto";
 }
 
-h1 {
-    padding-top: 12%;
+.landing-header-2 {
     font-size: 30px;
     color: white;
     font-family: "Roboto";
@@ -30,7 +28,7 @@ h1 {
 
 .text-block {
     width: 100%;
-    padding: 10px;
+    padding: 20%;
     display: inline-block;
     box-sizing: border-box;
     font-size: 18px;
@@ -39,6 +37,7 @@ h1 {
     border: 2px solid black;
     font-family: "Roboto";
     background-color: white;
+    color: #2D304E;
 }
 
 .about-section {
@@ -46,7 +45,7 @@ h1 {
     font-size: 24px;
     background-color: rgba(239, 118, 119, 0.91);
     height: 20%;
-    margin-top: -8%;
+    padding: 10%;
 }
 
 .text-container {
@@ -64,6 +63,9 @@ h1 {
     margin-top: 5%;
     font-family: "Roboto", helvetica, sans-serif;
 }
+h4 {
+    color: white;
+}
 
 .why-section {
     text-align: center;
@@ -71,6 +73,7 @@ h1 {
     background-color: rgba(239, 118, 119, 0.91);
     height: 20%;
     margin-bottom: 10%;
+    padding: 10%;
 }
 
 .text-container-2 {
@@ -79,14 +82,15 @@ h1 {
 }
 
 h5 {
-    margin-top: 10px;
-    font-size: 18px;
+   
+    font-size: 24px;
     font-family: "Roboto";
+    font: bold;
   }
   
 
 
-@media screen and  (min-width: 767px) {
+/*@media screen and  (min-width: 767px) {
     .text-block {
         float: left;
         width: 33.3%;
@@ -100,4 +104,4 @@ h5 {
     .about-section {
         margin-top: -3%;
     }
-}
+}*/
