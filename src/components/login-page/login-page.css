@@ -1,76 +1,119 @@
 header {
-    text-align: center;
-    font-size: 30px;
-    font-family: "Roboto";
-    background-color: rgba(239, 118, 119, 0.91);
-    color: #2F3250;
-    background: cover;
-    height: 200px;
-    margin-top: 0;
+  text-align: center;
+  font-size: 30px;
+  font-family: "Roboto";
+  background-color: rgba(239, 118, 119, 0.91);
+  color: #2F3250;
+  background: cover;
+  height: 200px;
+  margin-top: 0;
+  padding: 10%;
+}
+
+h1 {
+text-align: center;
+ font-size: 80px;
+ padding: 5%; 
+}
+
+#login-page {
+  background-color: #2F3250;
+  font-family: "Roboto", helvetica, sans-serif;
+  padding: 85px 0 0;
+  margin: 0;
+  font-size: 18px;
+  height: 100%;
+  font-family: "Roboto";
+  overflow: scroll;
+  width: 100%;
 }
 
 
+.login-form {
+  width: 60%;
+  padding: 10%;
+  margin: 0 auto;
+}
 
-#login-page {
-    background-color: rgba(105, 174, 178, 1);
-    font-family: "Roboto", helvetica, sans-serif;
-    padding: 85px 0 0;
-    margin: 0;
-    font-size: 18px;
-    height: 100%;
-    font-family: "Roboto", helvetica, sans-serif;
-  }
-  
-  fieldset {
-    padding: 0;
-    border: 0;
-    margin: 0;
-  }
-  
-  .login-form {
-    width: 60%;
-    padding: 30px;
-    border-radius: 3px;
-    background: white;
-    margin: 0 auto;
-  }
-  
-  .login-form legend {
-    width: 100%;
-    line-height: 38px;
-    font-size: 35px;
-    font-weight: 300;
-    color: #565656;
-    text-align: center;
-    letter-spacing: 0;
-    margin: 0 auto 45px;
-  }
-  
-  input[type="text"],
-  input[type="password"],
-  button[type="submit"] {
-    box-sizing: border-box;
-    display: block;
-    width: 100%;
-    height: auto;
-    font-size: 18px;
-    text-align: left;
-    padding: 15px;
-    border: 2px solid #e7e7e7;
-    border-radius: 3px;
-    background: #fcfcfc;
-    margin: 10px auto 20px;
-    transition: opacity 0.4s;
-  }
-  
-  button[type="submit"] {
-    height: auto;
-    font-size: 22px;
-    font-weight: 500;
-    text-align: center;
+#username {
     color: white;
-    background: darkslategray;
-    border: 0;
-    cursor: pointer;
-    margin-bottom: 0;
+}
+
+#password {
+    color: white;
+}
+.login-form legend {
+  width: 100%;
+  line-height: 38px;
+  font-size: 35px;
+  font-weight: 300;
+  color: white;
+  text-align: center;
+  letter-spacing: 0;
+  margin: 0 auto 45px;
+}
+
+input[type="text"],
+input[type="password"],
+button[type="submit"] {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  height: auto;
+  font-size: 18px;
+  text-align: left;
+  padding: 15px;
+  border: 2px solid #e7e7e7;
+  border-radius: 3px;
+  background: #fcfcfc;
+  margin: 10px auto 20px;
+  transition: opacity 0.4s;
+}
+
+button[type="submit"] {
+  height: auto;
+  font-size: 22px;
+  font-weight: 500;
+  text-align: center;
+  color: white;
+  background:rgba(239, 118, 119, 0.91) ;
+  border: 0;
+  cursor: pointer;
+  margin-bottom: 0;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(239, 118, 119, 0.91);
+  color: white;
+  text-align: center;
+  height: 8%;
+  font-size: 40px;
+}
+
+.footer p {
+    margin-top: 0%;
+}
+@media screen and  (min-width: 1024px) {
+  .footer {
+      height: 50px;
+      font-size: 20px;
   }
+
+  header {
+      height: 200px;
+      padding: 3%;
+  }
+
+  h1 {
+      font-size: 60px;
+      padding: 5%;
+  }
+
+  #login-page {
+      padding: 0 0 350px;
+  }
+}

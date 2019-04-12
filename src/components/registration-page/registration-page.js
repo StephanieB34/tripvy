@@ -11,12 +11,13 @@ export function RegistrationPage(props) {
         return <Redirect to="/dashboard" />;
     }
     return (
-        <div id="signup-page" hidden>
-        <header>Register</header>
+        <div id="signup-page">
+        <header><h1>Register</h1>
+        </header>
         <form role="form" accept-charset="UTF-8" class="signup-form">
           <fieldset>
             <legend>Register</legend>
-            <label for="first-name">First Name</label>
+            <label id="first-name">First Name</label>
             <input
               type="text"
               placeholder="Type here"
@@ -25,7 +26,7 @@ export function RegistrationPage(props) {
               required
             />
   
-            <label for="last-name">Last Name</label>
+            <label id="last-name">Last Name</label>
             <input
               type="text"
               placeholder="Type here"
@@ -34,7 +35,7 @@ export function RegistrationPage(props) {
               required
             />
   
-            <label for="username">Username</label>
+            <label id="username">Username</label>
             <input
               type="text"
               placeholder="Type here"
@@ -43,7 +44,7 @@ export function RegistrationPage(props) {
               required
             />
   
-            <label for="password">Password</label>
+            <label id="password">Password</label>
             <input
               type="password"
               placeholder="Type here"
@@ -52,7 +53,7 @@ export function RegistrationPage(props) {
               required
             />
   
-            <label for="retype-password">Retype Password</label>
+            <label id="retype-password">Retype Password</label>
             <input
               type="password"
               placeholder="Type again here"

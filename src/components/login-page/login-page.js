@@ -20,7 +20,9 @@ export class LoginForm extends React.Component {
     }
     return (
         <div id="login-page">
-        <header>Login</header>
+        <header>
+          <h1>Login</h1>
+        </header>
             <form
               role="form"
               action="login"
@@ -28,7 +30,6 @@ export class LoginForm extends React.Component {
               method="post"
               class="login-form"
             >
-              <fieldset>
                 <legend>Log In</legend>
                 <label for="username">Username</label>
                 <input
@@ -48,7 +49,6 @@ export class LoginForm extends React.Component {
                 />
                
                 <button type="submit">Enter</button>
-              </fieldset>
             </form>
           </div>
     );
