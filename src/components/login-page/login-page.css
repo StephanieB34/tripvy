@@ -1,32 +1,9 @@
 #login-page {
-  background-color: #2F3250;
-  font-family: "Roboto", helvetica, sans-serif;
-  padding: 85px 0 0;
-  margin: 0;
+  background-color: #2f3250;
   font-size: 18px;
-  height: 100%;
-  font-family: "Roboto";
-  overflow: scroll;
-  width: 100%;
+  min-height: calc(100% - 80px);
 }
 
-button[type="submit"] {
-  height: auto;
-  font-size: 22px;
-  font-weight: 500;
-  text-align: center;
-  color: white;
-  background:rgba(239, 118, 119, 0.91) ;
-  border: 0;
-  cursor: pointer;
-  margin-left: 10%;
-  margin-right: 10%;
-}
-
-@media screen and  (min-width: 1024px) {
-  
-
-  #login-page {
-      padding: 0 0 350px;
-  }
+.login-form {
+  padding: 85px;
 }

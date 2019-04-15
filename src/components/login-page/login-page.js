@@ -3,6 +3,7 @@ import { Field, reduxForm, focus } from "redux-form";
 
 import { login } from "../../actions/auth";
 import { required, nonEmpty } from "../../validators";
+import "./login-page.css";
 
 export class LoginForm extends React.Component {
   onSubmit(values) {
@@ -19,38 +20,39 @@ export class LoginForm extends React.Component {
       );
     }
     return (
-        <div id="login-page">
+      <div id="login-page">
         <header>
           <h1>Login</h1>
         </header>
-            <form
-              role="form"
-              action="login"
-              accept-charset="UTF-8"
-              method="post"
-              class="login-form"
-            >
-                <legend>Log In</legend>
-                <label for="username">Username</label>
-                <input
-                  type="text"
-                  placeholder="Type here"
-                  name="username"
-                  id="login-username"
-                  required
-                />
-                <label for="password">Password</label>
-                <input
-                  type="password"
-                  placeholder="Type here"
-                  name="login-password"
-                  id="login-password"
-                  required
-                />
-               
-                <button type="submit">Enter</button>
-            </form>
-          </div>
+
+        <form
+          role="form"
+          action="login"
+          accept-charset="UTF-8"
+          method="post"
+          class="login-form"
+        >
+          <legend>Log In</legend>
+          <label for="username">Username</label>
+          <input
+            type="text"
+            placeholder="Type here"
+            name="username"
+            id="login-username"
+            required
+          />
+          <label for="password">Password</label>
+          <input
+            type="password"
+            placeholder="Type here"
+            name="login-password"
+            id="login-password"
+            required
+          />
+
+          <button type="submit">Enter</button>
+        </form>
+      </div>
     );
   }
 }
