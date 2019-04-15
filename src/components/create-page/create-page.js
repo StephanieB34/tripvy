@@ -32,9 +32,6 @@ export function createPage(props) {
                 <button id="add">Add Field</button>
             </form>
             </div>
-            <div class="footer">
-                <p>Stephanie Beres</p>
-            </div>
         </div>
     );
 }
