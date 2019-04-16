@@ -11,24 +11,24 @@ export function Dashboard(props) {
     
 
 return (
-      <div>
-      <header> 
-        <h1>Tripvy</h1>
-      </header>
-      <div className="dashboard-page">
+  <div>
+    <header> 
+      <h1>Tripvy</h1>
+    </header>
+    <div className="dashboard-page">
       <button type="submit"> Create List</button>
-      <form className="dashboard-form">
-        <select id="details">
-          <option value="location">Location: Bora Bora   Details </option>
-          <option value="items">sandals</option>
-          <option value="items">jacket</option>
-          <option value="items">t-shirt</option>
-          <button id="delete"> Delete</button>
-        </select>
-
-      </form>
+    <form id="list">
+      <select id="details">
+        <option value="location">Location: Bora Bora   Details </option>
+        <option value="items">sandals</option>
+        <option value="items">jacket</option>
+        <option value="items">t-shirt</option>
+        <button id="delete"> Delete</button>
+      </select>
+    </form> 
+    
     </div>
-    </div>
+  </div>
   );
 }
 

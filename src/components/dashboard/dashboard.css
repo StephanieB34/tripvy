@@ -1,25 +1,20 @@
 .dashboard-page {
     background-color: #2F3250;
     font-size: 25px;
+    /*padding-bottom: 150px;*/
     min-height: calc(100% - 80px);
-    
-    
-    
 }
 
-/*#details{
-    display: block;
-    width: 100%;
+#details {
     font-size: 18px;
-    text-align: left;
-    padding: 15px;
     border: 2px solid #e7e7e7;
     border-radius: 3px;
     background: #fcfcfc;
-    margin: 10px auto 20px;
-    transition: opacity 0.4s;
-
-}*/
+    /*margin: 10px auto 20px;*/
+    margin: 10%;
+    
+    
+}
 
 
 
