@@ -1,9 +1,10 @@
 #login-page {
   background-color: #2f3250;
-  font-size: 18px;
+  font-size: 25px;
   min-height: calc(100% - 80px);
 }
 
 .login-form {
   padding: 85px;
+  color: white;
 }

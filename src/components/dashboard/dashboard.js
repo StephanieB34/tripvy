@@ -5,7 +5,9 @@ import {Link, Redirect} from 'react-router-dom';
 import './dashboard.css';
 
 export function Dashboard(props) {
-    
+  if (props.loggedIn) {
+    return <Redirect to="/dashboardPage" />;
+}
     
 
 return (
@@ -14,8 +16,8 @@ return (
         <h1>Tripvy</h1>
       </header>
       <div className="dashboard-page">
-      <button id="create"> Create List</button>
-      <form id="list">
+      <button type="submit"> Create List</button>
+      <form className="dashboard-form">
         <select id="details">
           <option value="location">Location: Bora Bora   Details </option>
           <option value="items">sandals</option>
@@ -23,6 +25,7 @@ return (
           <option value="items">t-shirt</option>
           <button id="delete"> Delete</button>
         </select>
+
       </form>
     </div>
     </div>

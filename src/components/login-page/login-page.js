@@ -32,7 +32,7 @@ export class LoginForm extends React.Component {
           method="post"
           class="login-form"
         >
-          <legend>Log In</legend>
+          <legend></legend>
           <label for="username">Username</label>
           <input
             type="text"

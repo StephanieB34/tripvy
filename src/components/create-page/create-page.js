@@ -17,19 +17,15 @@ export function createPage(props) {
         </header>
             <div className="create-page">
       
-            <form id="list">
-                <p>Where are you going?</p><br/>
+            <form className="create-form">
+                <p>Where are you going?</p>
                 <input type="text" name="location" id="location"/>
-                <br/>
-                <br/>
-                <p>What do you need?</p><br/>
+                
+                <p>What do you need?</p>
                 <input type="text" name="item" id="item"/>
-                <br/>
                 <input type="text" name="item" id="item"/>
-                <br/>
                 <input type="text" name="item" id="item"/>
-                <br/>
-                <button id="add">Add Field</button>
+                <button type="submit">Add Field</button>
             </form>
             </div>
         </div>
