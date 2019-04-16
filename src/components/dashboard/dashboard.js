@@ -11,7 +11,7 @@ export function Dashboard(props) {
     
 
 return (
-  <div>
+  <div className="dashboard">
     <header> 
       <h1>Tripvy</h1>
     </header>

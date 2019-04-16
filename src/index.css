@@ -76,7 +76,11 @@ button[type="submit"] {
   cursor: pointer;
   margin: 10%;
 }
-
+@media screen and (min-width: 375px) {
+  .footer {
+    height: 15vh;
+  }
+}
 /*
 @media screen and  (min-width: 1024px) {
   .footer {
