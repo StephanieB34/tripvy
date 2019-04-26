@@ -17,11 +17,9 @@ export function LandingPage(props) {
 		</div>
 	
 	    <nav class="menu">
-		    <a href="#" class="item_menu">home</a>
-		    <a href="#" class="item_menu">about</a>
-		    <a href="#" class="item_menu">products</a>
-		    <a href="#" class="item_menu">services</a>
-		    <a href="#" class="item_menu">contact</a>
+		    <a href="#" class="item_menu">login</a>
+		    <a href="#" class="item_menu">log out</a>
+		    
 	    </nav>
         </div>
         );

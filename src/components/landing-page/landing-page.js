@@ -63,10 +63,7 @@ export function LandingPage(props) {
         <div>
           <h3>Login</h3>
           <p>
-            There is nothing worse than getting to your new destination and
-            realizing you have forgotten your most important items, or even
-            worse, realizing you have forgotten important work related items.
-            Tripvy prevents these disasters from happening. Try it now!
+            Don't wait to be stuck in a tough situation, sign up now!
           </p>
         </div>
       </section>

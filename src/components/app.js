@@ -54,6 +54,10 @@ export class App extends React.Component {
         <div className="footer">
             <p>Stephanie Beres</p>
         </div>
+        <div>
+        
+        </div>
+
       </div>
     );
   }
