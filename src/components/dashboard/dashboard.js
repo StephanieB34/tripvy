@@ -1,39 +1,70 @@
-import React from 'react';
-import {connect} from 'react-redux';
-import {Link, Redirect} from 'react-router-dom';
+import React from "react";
+import { connect } from "react-redux";
+// import requiresLogin from "./requires-login";
+// import { fetchProtectedData } from "../../actions/protected-data";
+import { API_BASE_URL } from "../../config";
+import "./dashboard.css";
+export class Dashboard extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      trips: []
+    };
+  }
 
-import './dashboard.css';
+  componentDidMount() {
+    fetch(`${API_BASE_URL}/trips`, {
+      method: "GET",
+      headers: {
+        // Authorization: `Bearer ${authToken}`
+      }
+    })
+      .then(res => res.json())
+      .then(trips => this.setState({ trips }))
+      .catch(err => {
+        console.log(err);
+      });
+  }
 
-export function Dashboard(props) {
-  if (props.loggedIn) {
-    return <Redirect to="/dashboardPage" />;
+  render() {
+    return (
+      <div className="dashboard">
+        <header>
+          <h1>Tripvy</h1>
+        </header>
+        <div className="dashboard-page">
+          <button type="submit"> Create List</button>
+
+          {this.state.trips.map((trip, key) => (
+            <div id="details" key={key}>
+              <div value="location">Location: {trip.location} </div>
+              {trip.itemsNeeded.map((item, key) => (
+                <div value="items" key={key}>
+                  {item}
+                </div>
+              ))}
+              <button id="delete"> Delete</button>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  }
 }
-    
 
-return (
-  <div className="dashboard">
-    <header> 
-      <h1>Tripvy</h1>
-    </header>
-    <div className="dashboard-page">
-      <button type="submit"> Create List</button>
-    <form id="list">
-      <select id="details">
-        <option value="location">Location: Bora Bora   Details </option>
-        <option value="items">sandals</option>
-        <option value="items">jacket</option>
-        <option value="items">t-shirt</option>
-        <button id="delete"> Delete</button>
-      </select>
-    </form> 
-    
-    </div>
-  </div>
-  );
-}
+//
+// <div value="items">jacket</div>
+// <div value="items">t-shirt</div>
 
-const mapStateToProps = state => ({
-    loggedIn: state.auth.currentUser !== null
-});
+const mapStateToProps = state => {
+  return {};
+  // const { currentUser } = state.auth;
+  // return {
+  //   username: state.auth.currentUser.username,
+  //   name: `${currentUser.firstName} ${currentUser.lastName}`,
+  //   protectedData: state.protectedData.data
+  // };
+};
 
-export default connect(mapStateToProps)(Dashboard); 
+// export default requiresLogin()(connect(mapStateToProps)(Dashboard));
+export default connect(mapStateToProps)(Dashboard);

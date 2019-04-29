@@ -43,16 +43,21 @@
   /* padding: 20%; */
   display: inline-block;
   font-size: 18px;
-  height: 320px;
+  height: 500px;
   border: 2px solid black;
   background-color: white;
   color: #2d304e;
   margin-bottom: 10px;
 }
 
+.landing-img {
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
 #landing-img-1 {
   background-image: url("https://images.unsplash.com/photo-1534961880437-ce5ae2033053?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
-  
 }
 #landing-img-2 {
   background-image: url("https://images.unsplash.com/photo-1531938716357-224c16b5ace3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
