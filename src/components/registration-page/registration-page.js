@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {Link, Redirect} from 'react-router-dom';
+import {/*Link,*/ Redirect} from 'react-router-dom';
 
 import  './registration-page.css';
 
@@ -14,7 +14,7 @@ export function RegistrationPage(props) {
         <div id="signup-page">
         <header><h1>Register</h1>
         </header>
-        <form role="form" acceptCharset="UTF-8" className="signup-form">
+        <form  acceptCharset="UTF-8" className="signup-form">
             <label id="first-name">First Name</label>
             <input
               type="text"

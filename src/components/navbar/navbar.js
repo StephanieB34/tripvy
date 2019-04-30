@@ -1,33 +1,27 @@
 import React from 'react';
-import {connect} from 'react-redux';
-import {Link, Redirect} from 'react-router-dom';
+/*import {connect} from 'react-redux';*/
+/*import {Link} from 'react-router-dom';*/
 
 import  './navbar.css';
 
-export function LandingPage(props) {
-    // If we are logged in redirect straight to the user's dashboard
-    if (props.loggedIn) {
-        return <Redirect to="/dashboard" />;
-    }
+import DrawerToggleButton from '../sideDrawer/DrawerToggleButton';
+//Renders navigation bar
+const navbar = props => (
+        <nav className="navbar-menu">
+            <div>
+                <DrawerToggleButton/>
+            </div>
+            <div></div>
+            <div className="navbar-items">
+                <ul>
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/logout">Log Out</a></li>
+                    <li><a href="/register">Register</a></li>
+                </ul>
+            </div>
 
-    return (
-        <div>
-        <div class="top">
-			<a href="#" class="menu_icon"><i class="material-icons"></i></a>
-		</div>
-	
-	    <nav class="menu">
-		    <a href="#" class="item_menu">login</a>
-		    <a href="#" class="item_menu">log out</a>
-		    
-	    </nav>
-        </div>
-        );
-    }
+        </nav>
     
-    const mapStateToProps = state => ({
-        loggedIn: state.auth.currentUser !== null
-    });
-    
-    export default connect(mapStateToProps)(navbar);
-    
+);
+
+export default navbar;

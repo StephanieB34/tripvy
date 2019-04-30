@@ -8,6 +8,8 @@ import Dashboard from "./dashboard/dashboard";
 import LoginPage from "./login-page/login-page";
 import RegistrationPage from "./registration-page/registration-page";
 import CreatePage from "./create-page/create-page";
+import Navbar from "./navbar/navbar";
+import SideDrawer from "./sideDrawer/SideDrawer";
 // import RegistrationPage from './registration-page';
 import { refreshAuthToken } from "../actions/auth";
 
@@ -43,8 +45,9 @@ export class App extends React.Component {
 
   render() {
     return (
-      <div className="app">
-       
+      <div style={{height:'100%'}}className="app">
+        <Navbar/>
+        <SideDrawer/>
         <Route exact path="/" component={LandingPage} />
         <Route exact path="/dashboard" component={Dashboard} />
         {/* <Route exact path="/register" component={RegistrationPage} /> */}
@@ -54,9 +57,7 @@ export class App extends React.Component {
         <div className="footer">
             <p>Stephanie Beres</p>
         </div>
-        <div>
         
-        </div>
 
       </div>
     );

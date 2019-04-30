@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { Link, Redirect } from "react-router-dom";
+import { /*Link,*/ Redirect } from "react-router-dom";
 
 import "./landing-page.css";
 
@@ -18,6 +18,7 @@ export function LandingPage(props) {
           Planning for your trip shouldn't be stressful
         </h2>
       </div>
+    
 
       <div className="about-section">
         <div>

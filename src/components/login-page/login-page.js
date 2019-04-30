@@ -1,8 +1,8 @@
 import React from "react";
-import { Field, reduxForm, focus } from "redux-form";
+import { /*Field,*/ reduxForm, focus } from "redux-form";
 
 import { login } from "../../actions/auth";
-import { required, nonEmpty } from "../../validators";
+/*import { required, nonEmpty } from "../../validators";*/
 import "./login-page.css";
 
 export class LoginForm extends React.Component {
@@ -11,6 +11,7 @@ export class LoginForm extends React.Component {
   }
 
   render() {
+    
     let error;
     if (this.props.error) {
       error = (
@@ -18,6 +19,7 @@ export class LoginForm extends React.Component {
           {this.props.error}
         </div>
       );
+     
     }
     return (
       <div id="login-page">
@@ -26,14 +28,13 @@ export class LoginForm extends React.Component {
         </header>
 
         <form
-          role="form"
           action="login"
-          accept-charset="UTF-8"
+          acceptCharset="UTF-8"
           method="post"
-          class="login-form"
+          className="login-form"
         >
           <legend></legend>
-          <label for="username">Username</label>
+          <label htmlFor="username">Username</label>
           <input
             type="text"
             placeholder="Type here"
@@ -41,7 +42,7 @@ export class LoginForm extends React.Component {
             id="login-username"
             required
           />
-          <label for="password">Password</label>
+          <label htmlFor="password">Password</label>
           <input
             type="password"
             placeholder="Type here"
@@ -53,6 +54,7 @@ export class LoginForm extends React.Component {
           <button type="submit">Enter</button>
         </form>
       </div>
+      
     );
   }
 }
