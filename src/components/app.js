@@ -15,6 +15,7 @@ import Backdrop from "./Backdrop/Backdrop";
 import { refreshAuthToken } from "../actions/auth";
 
 export class App extends React.Component {
+  
   componentDidUpdate(prevProps) {
     if (!prevProps.loggedIn && this.props.loggedIn) {
       // When we are logged in, refresh the auth token periodically
