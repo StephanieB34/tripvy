@@ -10,6 +10,7 @@ import RegistrationPage from "./registration-page/registration-page";
 import CreatePage from "./create-page/create-page";
 import Navbar from "./navbar/navbar";
 import SideDrawer from "./sideDrawer/SideDrawer";
+import Backdrop from "./Backdrop/Backdrop";
 // import RegistrationPage from './registration-page';
 import { refreshAuthToken } from "../actions/auth";
 
@@ -43,11 +44,27 @@ export class App extends React.Component {
     clearInterval(this.refreshInterval);
   }
 
+  state = {
+    sideDrawerOpen:false
+  };
+  drawerToggleClickHandler = () => {
+    this.setState((prevState) =>{
+      return {sideDrawerOpen: !prevState.sideDrawerOpen};
+    });  
+  };
   render() {
+    let sideDrawer;
+    let backdrop;
+
+    if(this.state.sideDrawerOpen) {
+      sideDrawer = <SideDrawer/>
+      backdrop =   <Backdrop/>
+    }
     return (
       <div style={{height:'100%'}}className="app">
-        <Navbar/>
-        <SideDrawer/>
+        <Navbar drawerClickHandler={this.drawerClickHandler}/>
+        {sideDrawer}
+        {backdrop}
         <Route exact path="/" component={LandingPage} />
         <Route exact path="/dashboard" component={Dashboard} />
         {/* <Route exact path="/register" component={RegistrationPage} /> */}
