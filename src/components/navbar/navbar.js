@@ -13,11 +13,7 @@ const navbar = props => (
             </div>
             <div></div>
             <div className="navbar-items">
-                <ul>
-                    <li><a href="/login">Login</a></li>
-                    <li><a href="/logout">Log Out</a></li>
-                    <li><a href="/registration">Register</a></li>
-                </ul>
+               
             </div>
 
         </nav>

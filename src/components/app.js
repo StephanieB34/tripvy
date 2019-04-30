@@ -15,7 +15,9 @@ import Backdrop from "./Backdrop/Backdrop";
 import { refreshAuthToken } from "../actions/auth";
 
 export class App extends React.Component {
-  
+  state = {
+    sideDrawerOpen:false
+  };
   componentDidUpdate(prevProps) {
     if (!prevProps.loggedIn && this.props.loggedIn) {
       // When we are logged in, refresh the auth token periodically
@@ -45,26 +47,28 @@ export class App extends React.Component {
     clearInterval(this.refreshInterval);
   }
 
-  state = {
-    sideDrawerOpen:false
-  };
+  
   drawerToggleClickHandler = () => {
     this.setState((prevState) =>{
       return {sideDrawerOpen: !prevState.sideDrawerOpen};
     });  
   };
+
+  backdropClickHandler = () => {
+    this.setState({sideDrawerOpen: false});
+  };
   render() {
-    let sideDrawer;
+   
     let backdrop;
 
     if(this.state.sideDrawerOpen) {
-      sideDrawer = <SideDrawer/>
-      backdrop =   <Backdrop/>
+     
+      backdrop =   <Backdrop click={this.backdropClickHandler}/>
     }
     return (
       <div style={{height:'100%'}}className="app">
-        <Navbar drawerClickHandler={this.drawerClickHandler}/>
-        {sideDrawer}
+        <Navbar drawerClickHandler={this.drawerToggleClickHandler}/>
+        <SideDrawer show={this.state.sideDrawerOpen}/>
         {backdrop}
         <Route exact path="/" component={LandingPage} />
         <Route exact path="/dashboard" component={Dashboard} />
