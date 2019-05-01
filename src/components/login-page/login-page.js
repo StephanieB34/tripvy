@@ -10,6 +10,7 @@ export class LoginForm extends React.Component {
     return this.props.dispatch(login(values.username, values.password));
   }
 
+  
   render() {
     
     let error;
@@ -27,7 +28,7 @@ export class LoginForm extends React.Component {
           <h1>Login</h1>
         </header>
 
-        <form
+        <form onSubmit
           action="login"
           acceptCharset="UTF-8"
           method="post"
@@ -39,14 +40,15 @@ export class LoginForm extends React.Component {
             type="text"
             placeholder="Type here"
             name="username"
-            id="login-username"
+            onChange = {this.handleInputChange}
+            id="login-username" 
             required
           />
           <label htmlFor="password">Password</label>
           <input
             type="password"
             placeholder="Type here"
-            name="login-password"
+            name="loginPassword"
             id="login-password"
             required
           />

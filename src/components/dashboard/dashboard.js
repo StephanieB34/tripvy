@@ -26,6 +26,7 @@ export class Dashboard extends React.Component {
       });
   }
 
+ 
   render() {
     return (
       <div className="dashboard">
@@ -43,7 +44,7 @@ export class Dashboard extends React.Component {
                   {item}
                 </div>
               ))}
-              <button id="delete"> Delete</button>
+              <button id="delete" > Delete</button>
             </div>
           ))}
         </div>
