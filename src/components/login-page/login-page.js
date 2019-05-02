@@ -1,21 +1,26 @@
 import React from "react";
-import { /*Field,*/ reduxForm, focus } from "redux-form";
-
+import { Field, reduxForm, focus } from "redux-form";
+import Input from "../input";
 import { login } from "../../actions/auth";
 /*import { required, nonEmpty } from "../../validators";*/
 import "./login-page.css";
+import {
+  required,
+  nonEmpty,
+  matches,
+  length,
+  isTrimmed
+} from "../../validators";
 
+const passwordLength = length({ min: 10, max: 72 });
 export class LoginForm extends React.Component {
   onSubmit(values) {
-    return this.props.dispatch(login(values.username, values.password));
+    console.log("Login", values); // make sure all values for each form are console.logged here
+    //this.props.dispatch(login(values.username, values.password)); // TODO sends data to server (Ajax)
+    return this.props.history.push("/dashboard"); //redirect to dashboard
   }
 
-  
   render() {
-
-    /*onSubmit(ajax) render the function, props.history.push('/dashboard'), 
-    values of input, ajax request, redirect to dashboard*/
-    
     let error;
     if (this.props.error) {
       error = (
@@ -23,7 +28,6 @@ export class LoginForm extends React.Component {
           {this.props.error}
         </div>
       );
-     
     }
     return (
       <div id="login-page">
@@ -31,35 +35,37 @@ export class LoginForm extends React.Component {
           <h1>Login</h1>
         </header>
 
-        <form onSubmit
-          action="login"
+        <form
+          onSubmit={this.props.handleSubmit(values => this.onSubmit(values))}
           acceptCharset="UTF-8"
-          method="post"
           className="login-form"
         >
-          <legend></legend>
+          <legend />
+
           <label htmlFor="username">Username</label>
-          <input
+
+          <Field
+            component={Input}
             type="text"
             placeholder="Type here"
             name="username"
-            onChange = {this.handleInputChange}
-            id="login-username" 
-            required
+            validate={[required, nonEmpty, isTrimmed]}
+            id="login-username"
           />
+
           <label htmlFor="password">Password</label>
-          <input
+
+          <Field
+            component={Input}
             type="password"
-            placeholder="Type here"
             name="loginPassword"
             id="login-password"
-            required
+            validate={[required, passwordLength, isTrimmed]}
           />
 
           <button type="submit">Enter</button>
         </form>
       </div>
-      
     );
   }
 }
