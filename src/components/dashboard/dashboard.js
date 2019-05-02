@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 // import { fetchProtectedData } from "../../actions/protected-data";
 import { API_BASE_URL } from "../../config";
 import "./dashboard.css";
+import {Link} from "react-router-dom";
 export class Dashboard extends React.Component {
   constructor(props) {
     super(props);
@@ -34,8 +35,9 @@ export class Dashboard extends React.Component {
           <h1>Tripvy</h1>
         </header>
         <div className="dashboard-page">
-          <button type="submit"> Create List</button>
-
+        <Link to="/create" className="button">Create List</Link>
+        {/* <button type="submit">Create List</button> */}
+       
           {this.state.trips.map((trip, key) => (
             <div id="details" key={key}>
               <div value="location">Location: {trip.location} </div>

@@ -27,6 +27,7 @@ export function createPage(props) {
                 <input type="text" name="item" id="item"/>
                 <button type="submit">Add Field</button>
             </form>
+            <button type="submit">Back</button>
             </div>
         </div>
     );

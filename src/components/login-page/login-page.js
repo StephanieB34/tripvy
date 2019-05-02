@@ -12,6 +12,9 @@ export class LoginForm extends React.Component {
 
   
   render() {
+
+    /*onSubmit(ajax) render the function, props.history.push('/dashboard'), 
+    values of input, ajax request, redirect to dashboard*/
     
     let error;
     if (this.props.error) {
