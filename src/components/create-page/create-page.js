@@ -1,39 +1,52 @@
 import React from "react";
 import { connect } from "react-redux";
-import { /*Link,*/ Redirect } from "react-router-dom";
-
+import { Field, reduxForm, focus } from "redux-form";
+import { Link, Redirect } from "react-router-dom";
+import Input from "../input";
+import {
+    nonEmpty,
+    isTrimmed
+  } from "../../validators";
 import "./create-page.css";
 
-export function createPage(props) {
-  // If we are logged in redirect straight to the user's dashboard
-  // if (props.loggedIn) {
-  //     return <Redirect to="/createPage" />;
-  // }
 
-  return (
-    <div>
-      <header>
-        <h1>Tripvy</h1>
-      </header>
+export class CreateForm extends React.Component {
+    onSubmit(values) {
+        const {  } = values;
+        return this.props.history.push("/dashboard") 
+        }
+
+    render() { 
+    return (
+        <div>
+        <header>
+            <h1>Tripvy</h1>
+        </header>
       <div className="create-page">
-        <form className="create-form">
+        <form onSubmit={this.props.handleSubmit(values => this.onSubmit(values))}
+        className="create-form">
           <p>Where are you going?</p>
-          <input type="text" name="location" id="location" />
+          <Field component={Input} type="text" name="location" id="location"/>
+          
 
           <p>What do you need?</p>
-          <input type="text" name="item" id="item" />
-          <input type="text" name="item" id="item" />
-          <input type="text" name="item" id="item" />
+          <Field component={Input} type="text" name="item" id="item" />
+
+          <Field component={Input} type="text" name="item" id="item" />
+
+          <Field component={Input} type="text" name="item" id="item" />
           <button type="submit">Add Field</button>
         </form>
-        <button type="submit">Back</button>
+        
       </div>
     </div>
-  );
+    );
+    }
 }
 
-const mapStateToProps = state => ({
-  loggedIn: state.auth.currentUser !== null
-});
-
-export default connect(mapStateToProps)(createPage);
+export default reduxForm({
+    form: "CreateForm",
+    onSubmitFail: (errors, dispatch) =>
+      dispatch(focus("create", Object.keys(errors)[0]))
+  })(CreateForm);
+  
