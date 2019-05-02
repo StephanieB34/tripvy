@@ -12,7 +12,13 @@
 
 
   @media screen and  (min-width: 1024px) {
-      .create-form {
-        padding-bottom: 300px;
+      .create-page {
+        min-height: 1050px;
       }
+
+      .create-form {
+        margin-right: 10%;
+        margin-left: 10%;
+      }
+
   } 

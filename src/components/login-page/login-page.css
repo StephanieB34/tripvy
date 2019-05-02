@@ -7,4 +7,12 @@
 .login-form {
   padding: 85px;
   color: white;
+  
+}
+
+@media screen and (min-width: 767px) {
+  .login-form {
+    margin-right: 20%;
+    margin-left: 20%;
+  }
 }
