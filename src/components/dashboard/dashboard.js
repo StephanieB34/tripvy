@@ -21,13 +21,30 @@ export class Dashboard extends React.Component {
       }
     })
       .then(res => res.json())
+      .then(trips =>
+        trips.map(trip => {
+          trip.open = false;
+          return trip;
+        })
+      )
       .then(trips => this.setState({ trips }))
       .catch(err => {
         console.log(err);
       });
   }
 
+  toggle(index) {
+    console.log(index);
+    let modifiedTrips = this.state.trips;
+    modifiedTrips[index].open = !modifiedTrips[index].open;
+
+    this.setState({
+      trips: modifiedTrips
+    });
+  }
+
   render() {
+    console.log(this.state.trips);
     return (
       <div className="dashboard">
         <header>
@@ -39,15 +56,20 @@ export class Dashboard extends React.Component {
           </Link>
           {/* <button type="submit">Create List</button> */}
 
-          {this.state.trips.map((trip, key) => (
-            <div id="details" key={key}>
+          {this.state.trips.map((trip, index) => (
+            <div id="details" key={index}>
               <div value="location">Location: {trip.location} </div>
-              {trip.itemsNeeded.map((item, key) => (
-                <div value="items" key={key}>
-                  {item}
-                </div>
-              ))}
-              <button id="delete"> Delete</button>
+              <button onClick={e => this.toggle(index)}>toggle</button>
+              {trip.open ? (
+                <React.Fragment>
+                  {trip.itemsNeeded.map((item, key) => (
+                    <div value="items" key={key}>
+                      {item}
+                    </div>
+                  ))}
+                  <button id="delete">Delete</button>
+                </React.Fragment>
+              ) : null}
             </div>
           ))}
         </div>
