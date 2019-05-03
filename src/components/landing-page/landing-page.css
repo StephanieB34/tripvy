@@ -53,7 +53,7 @@
 .landing-img {
   background-size: cover;
   width: 100%;
-  height: 100%;
+  height: 90%;
 }
 
 #landing-img-1 {
@@ -78,7 +78,7 @@
   text-align: center;
   padding: 10%;
   color: white;
-  font-size: 18px;
+  font-size: 24px;
 }
 
 @media screen and (min-width: 767px) {

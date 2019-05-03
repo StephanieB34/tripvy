@@ -25,13 +25,13 @@
 }
 
 .links {
-    margin-left: 10%;
     margin: 0.5rem;
 }
 .side-drawer a {
     color: #2d304e;
     text-decoration: none;
     font-size: 1.2rem;
+    margin-left: 30%;
 }
 
 .side-drawer a:hover,

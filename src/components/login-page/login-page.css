@@ -1,11 +1,11 @@
 #login-page {
   background-color: #2f3250;
   font-size: 25px;
-  min-height: calc(100% - 80px);
+  min-height: calc(100% - 50px);
 }
 
 .login-form {
-  padding: 85px;
+  padding: 70px;
   color: white;
   
 }
@@ -14,5 +14,33 @@
   .login-form {
     margin-right: 20%;
     margin-left: 20%;
+    padding: 10px;
+    margin-top: 10%;
+  }
+
+}
+
+
+@media screen and (max-width: 1024px) {
+  .login-form {
+    padding: 0;
+    margin-top: 15%;
+    margin-right: 15%;
+    margin-left: 15%;
+  }
+  label {
+    font-size: 35px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  label {
+    font-size: 25px;
+  }
+  .login-form {
+    padding: 0 90px ;
+    margin-left: 25%;
+    margin-right: 25%;
+    
   }
 }
