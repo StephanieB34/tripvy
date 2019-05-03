@@ -8,8 +8,20 @@ import { nonEmpty, isTrimmed } from "../../validators";
 import "./create-page.css";
 
 export class CreateForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      fields: ["item1"]
+    };
+  }
+
   onSubmit(values) {
-    const { location, item } = values;
+    const { location } = values;
+    let items = [];
+    this.state.fields.forEach(field => {
+      let val = values[field];
+      items.push(val);
+    });
 
     fetch(`${API_BASE_URL}/trips`, {
       method: "POST",
@@ -19,7 +31,7 @@ export class CreateForm extends React.Component {
       },
       body: JSON.stringify({
         location,
-        itemsNeeded: [item, item, item, item]
+        itemsNeeded: items
       })
     })
       .then(res => res.json())
@@ -27,6 +39,15 @@ export class CreateForm extends React.Component {
       .catch(err => {
         console.log(err);
       });
+  }
+
+  addField(e) {
+    e.preventDefault();
+    let fields = this.state.fields.slice();
+    fields.push(`item${fields.length + 1}`);
+    this.setState({
+      fields
+    });
   }
 
   render() {
@@ -49,9 +70,14 @@ export class CreateForm extends React.Component {
             />
 
             <p>What do you need?</p>
-            <Field component={Input} type="text" name="item" id="item" />
 
-            <button type="submit">Add Field</button>
+            {this.state.fields.map(item => (
+              <Field component={Input} type="text" name={item} id={item} />
+            ))}
+
+            <button onClick={e => this.addField(e)}>Add Field</button>
+
+            <button type="submit">Submit</button>
           </form>
         </div>
       </div>
