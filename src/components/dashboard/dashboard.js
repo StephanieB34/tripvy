@@ -51,10 +51,9 @@ export class Dashboard extends React.Component {
           <h1>Tripvy</h1>
         </header>
         <div className="dashboard-page">
-          <Link to="/create" className="button">
+          <Link to="/create" className="button" id="create-button">
             Create List
           </Link>
-          {/* <button type="submit">Create List</button> */}
 
           {this.state.trips.map((trip, index) => (
             <div id="details" key={index}>

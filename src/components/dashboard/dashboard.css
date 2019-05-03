@@ -1,31 +1,33 @@
 .dashboard-page {
-    background-color: #2F3250;
-    font-size: 25px;
-    padding-bottom: 150px;
-    min-height: 585px;
+  background-color: #2f3250;
+  font-size: 25px;
+  padding-bottom: 150px;
+  min-height: 585px;
+  padding: 50px 0;
 }
 
 #details {
-    font-size: 18px;
-    border: 2px solid #e7e7e7;
-    border-radius: 3px;
-    background: #fcfcfc;
-    /*margin: 10px auto 20px;*/
-    margin: 10%;  
+  font-size: 18px;
+  border: 2px solid #e7e7e7;
+  border-radius: 3px;
+  background: #fcfcfc;
+  /*margin: 10px auto 20px;*/
+  margin: 10%;
 }
 
-
-
-
+#create-button {
+  margin-top: 50px;
+  padding: 10px;
+}
 
 @media screen and (min-width: 767px) {
-   .dashboard-page {
-       min-height: 750px; 
-   }
+  .dashboard-page {
+    min-height: 750px;
   }
+}
 
-  @media screen and (min-width: 1023px) {
-    .dashboard-page {
-        min-height: 1050px; 
-    }
-   }
+@media screen and (min-width: 1023px) {
+  .dashboard-page {
+    min-height: 1050px;
+  }
+}

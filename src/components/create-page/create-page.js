@@ -4,7 +4,6 @@ import { Field, reduxForm, focus } from "redux-form";
 import { Link, Redirect } from "react-router-dom";
 import Input from "../input";
 import { API_BASE_URL } from "../../config";
-import { nonEmpty, isTrimmed } from "../../validators";
 import "./create-page.css";
 
 export class CreateForm extends React.Component {
