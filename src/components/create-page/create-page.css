@@ -11,9 +11,15 @@
 }
 
 
+@media screen and  (min-width: 768px) {
+  .create-page {
+    min-height: 775px;
+  }
+}
+
   @media screen and  (min-width: 1024px) {
       .create-page {
-        min-height: 1050px;
+        min-height: 1120px;
       }
 
       .create-form {

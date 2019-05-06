@@ -57,10 +57,12 @@
 
   #toggle {
     font-size: 25px;
+    margin-left: 80%;
   }
 
   #delete {
     font-size: 25px;
+    margin-left: 80%;
   }
 
   #location{
@@ -79,17 +81,19 @@
 
   #details {
     font-size: 20px;
+    padding: 3%;
   }
 
   #toggle{
     font-size: 18px;
-    margin-left: 70%;
+    margin-left: 90%;
     padding: 1%;
+    margin-top: 2%;
   }
 
   #delete{
     font-size: 18px;
-    margin-left: 70%;
+    margin-left: 90%;
     padding: 1%;
   }
 }
