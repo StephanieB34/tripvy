@@ -15,16 +15,41 @@
   .create-page {
     min-height: 775px;
   }
+  .create-form {
+    padding: 15%;
+    font-size: 30px;
+  }
+
+  #add-field {
+    font-size: 25px;
+  }
+
+  #submit {
+    font-size: 25px;
+  }
+  
 }
 
-  @media screen and  (min-width: 1024px) {
-      .create-page {
-        min-height: 1120px;
-      }
+@media screen and  (min-width: 1024px) {
+  .create-page {
+    min-height: 1120px;
+  }
+}
 
+
+@media screen and  (min-width: 1025px) {
       .create-form {
-        margin-right: 10%;
-        margin-left: 10%;
+        margin-right: 12%;
+        margin-left: 12%;
+        font-size: 32px;
       }
 
+      #add-field {
+        font-size: 22px;
+        padding: 1%;
+      }
+      #submit{
+        font-size: 22px;
+        padding: 1%;
+      }
   } 

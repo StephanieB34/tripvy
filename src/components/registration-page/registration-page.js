@@ -91,7 +91,7 @@ const matchesPassword = matches("password");
             <div id= "signup-error">
             
             </div>
-            <button type="submit">Sign-up</button>
+            <button id="sign-up"type="submit">Sign-up</button>
         </form>
       </div>
     );

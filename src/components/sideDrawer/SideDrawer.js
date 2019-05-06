@@ -14,6 +14,7 @@ const sideDrawer = props => {
             <Link className="links" to="/Registration">Register</Link>
             <Link className="links" to="/logout">Log Out</Link>
             <Link className="links" to="/dashboard">Dashboard</Link>
+            <Link className="links" to="/create">Add a Trip</Link>
         
     </nav>);
 };

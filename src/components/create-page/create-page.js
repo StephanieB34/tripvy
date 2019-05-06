@@ -74,9 +74,9 @@ export class CreateForm extends React.Component {
               <Field component={Input} type="text" name={item} id={item} />
             ))}
 
-            <button onClick={e => this.addField(e)}>Add Field</button>
+            <button id="add-field"className="button"onClick={e => this.addField(e)}>Add Field</button>
 
-            <button type="submit">Submit</button>
+            <button id="submit"type="submit">Submit</button>
           </form>
         </div>
       </div>
