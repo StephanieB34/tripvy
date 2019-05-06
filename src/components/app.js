@@ -10,13 +10,13 @@ import RegistrationPage from "./registration-page/registration-page";
 import CreatePage from "./create-page/create-page";
 import Navbar from "./navbar/navbar";
 import SideDrawer from "./sideDrawer/SideDrawer";
-import Backdrop from "./Backdrop/Backdrop";
+import Backdrop from "./sideDrawer/Backdrop";
 // import RegistrationPage from './registration-page';
 import { refreshAuthToken } from "../actions/auth";
 
 export class App extends React.Component {
   state = {
-    sideDrawerOpen:false
+    sideDrawerOpen: false
   };
   componentDidUpdate(prevProps) {
     if (!prevProps.loggedIn && this.props.loggedIn) {
@@ -47,40 +47,34 @@ export class App extends React.Component {
     clearInterval(this.refreshInterval);
   }
 
-  
   drawerToggleClickHandler = () => {
-    this.setState((prevState) =>{
-      return {sideDrawerOpen: !prevState.sideDrawerOpen};
-    });  
+    this.setState(prevState => {
+      return { sideDrawerOpen: !prevState.sideDrawerOpen };
+    });
   };
 
   backdropClickHandler = () => {
-    this.setState({sideDrawerOpen: false});
+    this.setState({ sideDrawerOpen: false });
   };
   render() {
-   
     let backdrop;
 
-    if(this.state.sideDrawerOpen) {
-     
-      backdrop =   <Backdrop click={this.backdropClickHandler}/>
+    if (this.state.sideDrawerOpen) {
+      backdrop = <Backdrop click={this.backdropClickHandler} />;
     }
     return (
-      <div style={{height:'100%'}}className="app">
-        <Navbar drawerClickHandler={this.drawerToggleClickHandler}/>
-        <SideDrawer show={this.state.sideDrawerOpen}/>
+      <div style={{ height: "100%" }} className="app">
+        <Navbar drawerClickHandler={this.drawerToggleClickHandler} />
+        <SideDrawer show={this.state.sideDrawerOpen} />
         {backdrop}
         <Route exact path="/" component={LandingPage} />
         <Route exact path="/dashboard" component={Dashboard} />
-        {/* <Route exact path="/register" component={RegistrationPage} /> */}
         <Route exact path="/login" component={LoginPage} />
         <Route exact path="/registration" component={RegistrationPage} />
         <Route exact path="/create" component={CreatePage} />
         <div className="footer">
-            <p>Stephanie Beres</p>
+          <p>Stephanie Beres</p>
         </div>
-        
-
       </div>
     );
   }

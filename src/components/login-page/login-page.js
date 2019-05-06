@@ -4,30 +4,25 @@ import Input from "../input";
 import { login } from "../../actions/auth";
 /*import { required, nonEmpty } from "../../validators";*/
 import "./login-page.css";
-import {
-  required,
-  nonEmpty,
-  length,
-  isTrimmed
-} from "../../validators";
+import { required, nonEmpty, length, isTrimmed } from "../../validators";
 
 const passwordLength = length({ min: 10, max: 72 });
 export class LoginForm extends React.Component {
   onSubmit(values) {
-    console.log("Login", values); // make sure all values for each form are console.logged here
-    //this.props.dispatch(login(values.username, values.password)); // TODO sends data to server (Ajax)
-    return this.props.history.push("/dashboard"); //redirect to dashboard
+    return this.props
+      .dispatch(login(values.username, values.password))
+      .then(() => this.props.history.push("/dashboard"));
   }
 
   render() {
-    let error;
-    if (this.props.error) {
-      error = (
-        <div className="form-error" aria-live="polite">
-          {this.props.error}
-        </div>
-      );
-    }
+    // let error;
+    // if (this.props.error) {
+    //   error = (
+    //     <div className="form-error" aria-live="polite">
+    //       {this.props.error}
+    //     </div>
+    //   );
+    // }
     return (
       <div id="login-page">
         <header>
@@ -57,12 +52,14 @@ export class LoginForm extends React.Component {
           <Field
             component={Input}
             type="password"
-            name="loginPassword"
-            id="login-password"
+            name="password"
+            id="password"
             validate={[required, passwordLength, isTrimmed]}
           />
 
-          <button id="enter"type="submit">Enter</button>
+          <button id="enter" type="submit">
+            Enter
+          </button>
         </form>
       </div>
     );

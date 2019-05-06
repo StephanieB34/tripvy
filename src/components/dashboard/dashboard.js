@@ -1,10 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
-// import requiresLogin from "./requires-login";
-// import { fetchProtectedData } from "../../actions/protected-data";
 import { API_BASE_URL } from "../../config";
 import "./dashboard.css";
 import { Link } from "react-router-dom";
+import requiresLogin from "../requires-login";
 export class Dashboard extends React.Component {
   constructor(props) {
     super(props);
@@ -57,8 +56,12 @@ export class Dashboard extends React.Component {
 
           {this.state.trips.map((trip, index) => (
             <div id="details" key={index}>
-              <div id="location"value="location">Location: {trip.location} </div>
-              <button id="toggle"onClick={e => this.toggle(index)}>Details</button>
+              <div id="location" value="location">
+                Location: {trip.location}{" "}
+              </div>
+              <button id="toggle" onClick={e => this.toggle(index)}>
+                Details
+              </button>
               {trip.open ? (
                 <React.Fragment>
                   {trip.itemsNeeded.map((item, key) => (
@@ -77,19 +80,8 @@ export class Dashboard extends React.Component {
   }
 }
 
-//
-// <div value="items">jacket</div>
-// <div value="items">t-shirt</div>
-
 const mapStateToProps = state => {
   return {};
-  // const { currentUser } = state.auth;
-  // return {
-  //   username: state.auth.currentUser.username,
-  //   name: `${currentUser.firstName} ${currentUser.lastName}`,
-  //   protectedData: state.protectedData.data
-  // };
 };
 
-// export default requiresLogin()(connect(mapStateToProps)(Dashboard));
-export default connect(mapStateToProps)(Dashboard);
+export default requiresLogin()(connect(mapStateToProps)(Dashboard));
