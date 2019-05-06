@@ -18,6 +18,7 @@ Tripvy allows users to plan for their trips in advice by listing out all of the 
 
 
 Technology:
+<br/>
 HTML
 <br/>
 CSS
@@ -50,6 +51,7 @@ Bcryptjs
 
 
 Programs:
+<br/>
 Heroku
 <br/>
 mLab
