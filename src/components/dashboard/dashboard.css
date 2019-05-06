@@ -1,33 +1,97 @@
 .dashboard-page {
   background-color: #2f3250;
-  font-size: 25px;
+  /*font-size: 25px;*/
   padding-bottom: 150px;
   min-height: 585px;
   padding: 50px 0;
 }
 
 #details {
-  font-size: 18px;
-  border: 2px solid #e7e7e7;
+  font-size: 22px;
   border-radius: 3px;
   background: #fcfcfc;
-  /*margin: 10px auto 20px;*/
-  margin: 10%;
+  margin: 15%;
+  padding: 5%;
 }
 
 #create-button {
   margin-top: 50px;
   padding: 10px;
+  border-radius: 3px;
 }
 
+#toggle {
+  background-color: rgba(239, 118, 119, 0.91);
+  padding: 3%;
+  color: white;
+  font-size: 18px;
+  border-radius: 3px;
+  margin-left: 60%;
+  border: 2px solid #2f3250;
+  margin-top: 5%;
+}
+
+#delete {
+  background-color: rgba(239, 118, 119, 0.91);
+  padding: 3%;
+  color: white;
+  font-size: 18px;
+  border-radius: 3px;
+  margin-left: 60%;
+  border: 2px solid #2f3250;
+}
+
+#location {
+  font: bold;
+  font-size: 25px;
+  text-decoration: underline;
+}
 @media screen and (min-width: 767px) {
   .dashboard-page {
     min-height: 750px;
   }
+
+  #details {
+    font-size: 28px;
+  }
+
+  #toggle {
+    font-size: 25px;
+  }
+
+  #delete {
+    font-size: 25px;
+  }
+
+  #location{
+    font-size: 32px;
+  }
 }
 
-@media screen and (min-width: 1023px) {
+@media screen and (min-width: 1025px) {
   .dashboard-page {
     min-height: 1050px;
   }
+
+  #location {
+    font-size: 30px;
+  }
+
+  #details {
+    font-size: 20px;
+  }
+
+  #toggle{
+    font-size: 18px;
+    margin-left: 70%;
+    padding: 1%;
+  }
+
+  #delete{
+    font-size: 18px;
+    margin-left: 70%;
+    padding: 1%;
+  }
 }
+
+

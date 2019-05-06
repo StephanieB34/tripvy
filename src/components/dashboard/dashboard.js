@@ -57,8 +57,8 @@ export class Dashboard extends React.Component {
 
           {this.state.trips.map((trip, index) => (
             <div id="details" key={index}>
-              <div value="location">Location: {trip.location} </div>
-              <button onClick={e => this.toggle(index)}>toggle</button>
+              <div id="location"value="location">Location: {trip.location} </div>
+              <button id="toggle"onClick={e => this.toggle(index)}>Details</button>
               {trip.open ? (
                 <React.Fragment>
                   {trip.itemsNeeded.map((item, key) => (
