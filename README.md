@@ -19,23 +19,39 @@ Tripvy allows users to plan for their trips in advice by listing out all of the 
 
 Technology:
 HTML
+<br/>
 CSS
+<br/>
 JavaScript
+<br/>
 JQuery
+<br/>
 Ajax
+<br/>
 JSON
+<br/>
 Node.js
+<br/>
 Express
+<br/>
 Mocha
+<br/>
 Chai
+<br/>
 Mongo
+<br/>
 Mongoose
+<br/>
 React
+<br/>
 Passport
+<br/>
 Bcryptjs
 
 
 Programs:
 Heroku
+<br/>
 mLab
+<br/>
 TravisCI
