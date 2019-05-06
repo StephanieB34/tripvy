@@ -30,6 +30,10 @@
   label {
     font-size: 35px;
   }
+
+  #enter {
+    font-size: 30px;
+  }
 }
 
 @media screen and (min-width: 1025px) {

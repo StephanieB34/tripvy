@@ -86,4 +86,34 @@
     float: left;
     width: 33.3%;
   }
+
+  .about-section {
+    font-size: 30px;
+  }
+
+  .photo-section {
+    font-size: 25px;
+  }
+
+  .why-section {
+    font-size: 30px;
+  }
+
+  .call-to-action {
+    font-size: 30px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .about-section {
+    font-size: 25px;
+  }
+
+  .why-section {
+    font-size: 25px;
+  }
+
+  .call-to-action {
+    font-size: 25px;
+  }
 }

@@ -31,10 +31,22 @@
     color: #2d304e;
     text-decoration: none;
     font-size: 1.2rem;
-    margin-left: 30%;
+    margin-left: 20%;
 }
 
 .side-drawer a:hover,
 .side-drawer a:active {
     color: palevioletred;
+}
+
+@media screen and (min-width:767px) {
+    #nav-links {
+        font-size: 25px;
+    }
+}
+
+@media screen and (min-width: 1023px) {
+    #nav-links {
+        font-size: 28px;
+    }
 }

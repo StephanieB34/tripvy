@@ -7,7 +7,6 @@ import "./login-page.css";
 import {
   required,
   nonEmpty,
-  matches,
   length,
   isTrimmed
 } from "../../validators";
@@ -63,7 +62,7 @@ export class LoginForm extends React.Component {
             validate={[required, passwordLength, isTrimmed]}
           />
 
-          <button type="submit">Enter</button>
+          <button id="enter"type="submit">Enter</button>
         </form>
       </div>
     );

@@ -34,6 +34,18 @@
   .create-page {
     min-height: 1120px;
   }
+
+  .create-form {
+    font-size: 35px;
+  }
+
+  #add-field {
+    font-size: 32px;
+  }
+
+  #submit {
+    font-size: 32px;
+  }
 }
 
 

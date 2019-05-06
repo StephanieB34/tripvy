@@ -1,7 +1,7 @@
 import React from "react";
-import { connect } from "react-redux";
+/*import { connect } from "react-redux";*/
 import { Field, reduxForm, focus } from "redux-form";
-import { Link, Redirect } from "react-router-dom";
+/*import { Link, Redirect } from "react-router-dom";*/
 import Input from "../input";
 import { API_BASE_URL } from "../../config";
 import "./create-page.css";
