@@ -13,34 +13,40 @@ export class SideDrawer extends React.Component {
     }
     return (
       <nav className={drawerClasses}>
-        <Link id="nav-links" className="links" to="/login">
-          Login
-        </Link>
-        <Link id="nav-links" className="links" to="/Registration">
-          Register
-        </Link>
-        <Link
-          id="nav-links"
-          className="links"
-          to="/"
-          onClick={() => this.props.dispatch(clearAuth())}
-        >
-          Log Out
-        </Link>
-        <Link id="nav-links" className="links" to="/dashboard">
-          Dashboard
-        </Link>
-        <Link id="nav-links" className="links" to="/create">
-          Add a Trip
-        </Link>
+        {!this.props.currentUser ? (
+          <React.Fragment>
+            <Link id="nav-links" className="links" to="/login">
+              Login
+            </Link>
+            <Link id="nav-links" className="links" to="/Registration">
+              Register
+            </Link>
+          </React.Fragment>
+        ) : (
+          <React.Fragment>
+            <Link id="nav-links" className="links" to="/dashboard">
+              Dashboard
+            </Link>
+            <Link id="nav-links" className="links" to="/create">
+              Add a Trip
+            </Link>
+            <Link
+              id="nav-links"
+              className="links"
+              to="/"
+              onClick={() => this.props.dispatch(clearAuth())}
+            >
+              Log Out
+            </Link>
+          </React.Fragment>
+        )}
       </nav>
     );
   }
 }
 
 const mapStateToProps = state => {
-  // console.log(state);
-  return {};
+  return { currentUser: state.auth.currentUser };
 };
 
 export default connect(mapStateToProps)(SideDrawer);
