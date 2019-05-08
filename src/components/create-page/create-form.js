@@ -25,8 +25,8 @@ export class CreateForm extends React.Component {
     fetch(`${API_BASE_URL}/trips`, {
       method: "POST",
       headers: {
-        "Content-Type": "application/json"
-        // Authorization: `Bearer ${authToken}`
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${localStorage.getItem("authToken")}`
       },
       body: JSON.stringify({
         location,

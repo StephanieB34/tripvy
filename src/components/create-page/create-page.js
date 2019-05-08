@@ -5,7 +5,7 @@ import CreateForm from "./create-form";
 
 export class CreatePage extends React.Component {
   render() {
-    return <CreateForm />;
+    return <CreateForm history={this.props.history} />;
   }
 }
 

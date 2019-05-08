@@ -13,10 +13,13 @@ export class Dashboard extends React.Component {
   }
 
   componentDidMount() {
+    this.fetchAllTrips();
+  }
+  fetchAllTrips() {
     fetch(`${API_BASE_URL}/trips`, {
       method: "GET",
       headers: {
-        // Authorization: `Bearer ${authToken}`
+        Authorization: `Bearer ${localStorage.getItem("authToken")}`
       }
     })
       .then(res => res.json())
@@ -40,6 +43,18 @@ export class Dashboard extends React.Component {
     this.setState({
       trips: modifiedTrips
     });
+  }
+  delete(id) {
+    fetch(`${API_BASE_URL}/trips/${id}`, {
+      method: "DELETE",
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem("authToken")}`
+      }
+    })
+      .then(trips => this.fetchAllTrips())
+      .catch(err => {
+        console.log(err);
+      });
   }
 
   render() {
@@ -69,7 +84,9 @@ export class Dashboard extends React.Component {
                       {item}
                     </div>
                   ))}
-                  <button id="delete">Delete</button>
+                  <button id="delete" onClick={e => this.delete(trip.id)}>
+                    Delete
+                  </button>
                 </React.Fragment>
               ) : null}
             </div>
