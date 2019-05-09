@@ -48,7 +48,7 @@
 }
 @media screen and (min-width: 767px) {
   .dashboard-page {
-    min-height: 750px;
+    min-height: 800px;
   }
 
   #details {
