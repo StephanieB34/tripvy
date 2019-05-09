@@ -10,6 +10,10 @@
     color: white;
 }
 
+#add-field {
+  margin-top: auto;
+}
+
 
 @media screen and  (min-width: 768px) {
   .create-page {
